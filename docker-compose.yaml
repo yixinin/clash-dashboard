@@ -1,0 +1,16 @@
+version: '3'
+services:
+  clash:
+    build: .
+    container_name: clash
+    restart: always
+    ports:
+      - 9090:9090 # web port
+      - 7890:7890 # mixed-port
+    volumes:
+      - /home/ubuntu/app/clash/config.yaml:/root/.config/clash/config.yaml
+    environment:
+      TZ: Asia/Shanghai
+      sub: ""
+      ua: clash-verge
+      clash: /clash
