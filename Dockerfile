@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 
 WORKDIR /clash-dashboard
-Add ../ /clash-dashboard
+Add . /clash-dashboard
 
 RUN npm install -g pnpm
 
